@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/ball.avif">
+</head>
+<body>
+    <!-- Page des types de Pokémon -->
+    <div id="types-page" class="page active">
+        <img class="pokemoon" src="images/pokemon.png" alt="Pokémon">
+        <h1>Types de Pokémon</h1>
+         <!-- Barre de recherche pour les types -->
+    <input
+    type="text"
+    id="search-types"
+    placeholder="   Rechercher un type..."
+    oninput="searchTypes()"
+/>
+        <div id="types-container" class="container"></div>
+    </div>
+
+    <!-- Page des Pokémon par type -->
+    <div id="pokemons-page" class="page">
+        <img class="pokemoon" src="images/pokemon.png" alt="Pokémon">
+        <h1>Pokémon par Type</h1>
+         <!-- Barre de recherche pour les Pokémon -->
+    <input
+    type="text"
+    id="search-pokemons"
+    placeholder="   Rechercher un Pokémon..."
+    oninput="searchPokemons()"
+/>
+        <div id="pokemons-container" class="container"></div>
+        <button id="back-to-types" onclick="goBack()">Retour</button>
+    </div>
+
+    <!-- Page des détails du Pokémon -->
+    <div id="details-page" class="page">
+        <h1>Détails du Pokémon</h1>
+        <div id="details-container" class="details"></div>
+        <button id="back-to-pokemons" onclick="goBack()">Retour</button>
+    </div>
+
+    <script src="try.js"></script>
+</body>
+</html>
